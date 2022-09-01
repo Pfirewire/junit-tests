@@ -24,4 +24,8 @@ public class Cohort {
     public List<Student> getStudents() {
         return students;
     }
+
+    public boolean isEmpty() {
+        return this.students.size() == 0;
+    }
 }
