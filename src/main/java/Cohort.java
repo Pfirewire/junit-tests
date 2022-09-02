@@ -28,4 +28,6 @@ public class Cohort {
     public boolean isEmpty() {
         return this.students.size() == 0;
     }
+
+
 }
