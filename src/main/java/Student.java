@@ -45,4 +45,20 @@ public class Student {
         }
         return gradeTotal.doubleValue() / grades.size();
     }
+
+    public void updateGrade(int oldGrade, int newGrade) {
+        for(int i = 0; i < grades.size(); i++) {
+            if(grades.get(i) == oldGrade) {
+                grades.set(i, newGrade);
+            }
+        }
+    }
+
+    public void deleteGrade(int grade) {
+        for(int i = 0; i < grades.size(); i++) {
+            if(grades.get(i) == grade) {
+                grades.remove(i);
+            }
+        }
+    }
 }

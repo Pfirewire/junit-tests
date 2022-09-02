@@ -73,4 +73,22 @@ public class StudentTest {
         gradeAverage = totalGrades.doubleValue() / testGrades.size();
         assertEquals(gradeAverage, testStudent.getGradeAverage(), 0.1);
     }
+
+    @Test
+    public void testUpdateGrade() {
+        testStudent.updateGrade(50, 100);
+        for(int i = 0; i < testGrades.size(); i++) {
+            if(testGrades.get(i) == 50) {
+                testGrades.set(i, 100);
+            }
+        }
+        assertEquals(testGrades, testStudent.getGrades());
+    }
+
+    @Test
+    public void testDeleteGrade() {
+        testGrades.remove(3);
+        testStudent.deleteGrade(98);
+        assertEquals(testGrades, testStudent.getGrades());
+    }
 }
