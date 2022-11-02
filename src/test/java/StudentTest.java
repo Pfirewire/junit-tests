@@ -27,7 +27,7 @@ public class StudentTest {
     public void testStudentFields(){
         assertSame(1L, fer.getId());
         assertSame("fer", fer.getName());
-        assertSame(0, fer.getGrades().size());
+        assertSame(2, fer.getGrades().size());
     }
 
 
